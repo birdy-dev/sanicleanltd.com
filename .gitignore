@@ -7,3 +7,8 @@ node_modules
 .strapi
 .strapi-updater.json
 .tmp
+
+
+# Hugo
+public/
+resources/

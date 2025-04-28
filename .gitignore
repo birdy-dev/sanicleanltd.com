@@ -1,0 +1,9 @@
+dist
+node_modules
+.env
+
+
+# Strapi
+.strapi
+.strapi-updater.json
+.tmp

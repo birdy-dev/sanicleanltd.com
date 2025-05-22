@@ -1,0 +1,43 @@
+---
+import { Icon } from "astro-icon/components";
+
+type Client = {
+  label: string;
+  icon: string;
+};
+
+const clients: Client[] = [
+  { label: "Banks", icon: "bank" },
+  { label: "Offices", icon: "building-office" },
+  { label: "Restaurants", icon: "fork-knife" },
+  { label: "Schools", icon: "graduation-cap" },
+  { label: "Retail stores", icon: "storefront" },
+  { label: "Places of worship", icon: "synagogue" },
+  { label: "Dental clinics", icon: "tooth" },
+  { label: "Warehouses", icon: "warehouse" },
+  { label: "Healthcare facilities", icon: "hospital" },
+];
+---
+
+<div class="flex sm:py-16 overflow-clip">
+  <div class="flex justify-between animate-marquee gap-20 sm:gap-40 pr-20">
+    {
+      clients.map((client) => (
+        <div class="flex gap-2 text-nowrap items-center justify-center">
+          <Icon class="size-6" name={client.icon} />
+          {client.label}
+        </div>
+      ))
+    }
+  </div>
+  <div class="flex justify-between animate-marquee gap-20 sm:gap-40">
+    {
+      clients.map((client) => (
+        <div class="flex gap-2 text-nowrap items-center justify-center">
+          <Icon class="size-6" name={client.icon} />
+          {client.label}
+        </div>
+      ))
+    }
+  </div>
+</div>

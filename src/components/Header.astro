@@ -1,14 +1,25 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
+import { SITE_CONTACT, SITE_TITLE } from "../consts";
 import { Image } from "astro:assets";
 import Logo from "./logo.png";
+import { Icon } from "astro-icon/components";
+import LinkButton from "./ui/link_button.astro";
 ---
 
 <header>
-  <div class="flex items-center justify-between px-4">
-    <h2>
-      <a class="" href="/">
+  <div class="flex justify-center gap-x-6 px-6 py-2 sm:px-3.5">
+    <p class="text-xs/5">
+      <strong class="font-medium">Edmonton</strong>
+      <Icon class="mx-2 inline size-1 fill-current" name="dot" />
+      <strong class="font-medium">Calgary</strong>
+      <Icon class="mx-2 inline size-1 fill-current" name="dot" />
+      <strong class="font-medium">Vancouver</strong>
+    </p>
+  </div>
+  <div class="grid grid-cols-3 items-center px-4 max-w-screen-2xl mx-auto">
+    <h2 class="flex justify-start">
+      <a href="/">
         <Image
           src={Logo}
           alt={SITE_TITLE}
@@ -18,15 +29,26 @@ import Logo from "./logo.png";
         />
       </a>
     </h2>
-    <nav class="space-x-4">
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/services">Services</HeaderLink>
-      <HeaderLink href="/about">About</HeaderLink>
-      <HeaderLink href="/blog">Blog</HeaderLink>
-      <HeaderLink href="/contact">Contact</HeaderLink>
-    </nav>
-    <div>
-      <a class="p-4 bg-lime-600" href="/contact">Free Estimate</a>
+
+    <div class="flex justify-center">
+      <nav class="space-x-4">
+        <HeaderLink href="/">Home</HeaderLink>
+        <HeaderLink href="/services">Services</HeaderLink>
+        <HeaderLink href="/about">About</HeaderLink>
+        <!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
+        <HeaderLink href="/contact">Contact</HeaderLink>
+      </nav>
+    </div>
+
+    <div class="flex justify-end items-center gap-4">
+      <a
+        class="inline-flex items-center gap-2"
+        href={`tel:${SITE_CONTACT.phone}`}
+      >
+        <Icon class="text-blue-700 size-7" name="phone" />
+        {SITE_CONTACT.phone}
+      </a>
+      <LinkButton href="/contact">Free Estimate</LinkButton>
     </div>
   </div>
 </header>

@@ -4,6 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 import react from "@astrojs/react";
 
+import icon from "astro-icon";
+
 // https://astro.build/config
 export default defineConfig({
     site: "https://sanicleanltd.com",
@@ -11,7 +13,13 @@ export default defineConfig({
     security: {
         checkOrigin: false, // This depends on your hosting provider
     },
-    integrations: [react()],
+    integrations: [
+        react(),
+        icon({ iconDir: "./src/icons" }),
+    ],
+    image: {
+        domains: ["images.unsplash.com"],
+    },
     vite: {
         plugins: [tailwindcss()],
     },

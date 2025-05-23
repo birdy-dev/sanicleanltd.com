@@ -1,10 +1,137 @@
 ---
+import { SITE_CONTACT } from "@/consts";
 import Container from "../components/Container.astro";
 import Layout from "./_layout.astro";
+import { Icon } from "astro-icon/components";
+import SubmitButton from "@/components/ui/submit_button.astro";
 ---
 
-<Layout title="Contact" description="">
+<Layout title="Contact Saniclean" description="">
   <Container>
-    <p>Contact</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 py-36">
+      <div class="mx-auto max-w-xl">
+        <h2
+          class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
+        >
+          Get in touch
+        </h2>
+        <p class="mt-6 text-lg/8 text-gray-600">
+          Contact us for a <strong class="font-semibold">free estimate.</strong>
+        </p>
+        <p class="text-lg/8 text-gray-600">
+          Most services are available on a two-hour notice. We also provide a 24
+          hour emergency calling service.
+        </p>
+
+        <div>
+          <dl class="mt-10 space-y-4 text-base/7 text-gray-600">
+            <div class="flex items-center gap-x-4">
+              <dt class="flex-none">
+                <span class="sr-only">Telephone</span>
+                <Icon class="text-gray-400 size-6" name="phone" />
+              </dt>
+              <dd>
+                <a
+                  class="hover:text-gray-900"
+                  href={`tel:${SITE_CONTACT.phone}`}
+                >
+                  {SITE_CONTACT.phone}
+                </a>
+              </dd>
+            </div>
+            <div class="flex items-center gap-x-4">
+              <dt class="flex-none">
+                <span class="sr-only">Email</span>
+                <Icon class="text-gray-400 size-6" name="envelope-simple" />
+              </dt>
+              <dd>
+                <a class="hover:text-gray-900" href="mailto:hello@example.com"
+                  >{SITE_CONTACT.email}</a
+                >
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="w-full mx-auto max-w-xllg:mr-0 lg:max-w-lg">
+        <form>
+          <div class="space-y-6">
+            <div class="space-y-2.5">
+              <div class="flex justify-between text-sm/6">
+                <label for="name" class="block font-semibold text-gray-900">
+                  Name
+                </label>
+                <p class="text-gray-400">Required</p>
+              </div>
+              <input
+                class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                type="text"
+                name="name"
+                id="name"
+                autocomplete="given-name"
+                required
+              />
+            </div>
+
+            <div class="space-y-2.5">
+              <div class="flex justify-between text-sm/6">
+                <label for="email" class="block font-semibold text-gray-900">
+                  Email
+                </label>
+                <p class="text-gray-400">Required</p>
+              </div>
+              <input
+                class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                type="email"
+                name="email"
+                id="email"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="space-y-2.5">
+              <div class="flex justify-between text-sm/6">
+                <label
+                  for="phone-number"
+                  class="block font-semibold text-gray-900"
+                >
+                  Phone number
+                </label>
+                <p class="text-gray-400">Optional</p>
+              </div>
+
+              <input
+                class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                autocomplete="tel"
+              />
+            </div>
+            <div>
+              <div class="flex justify-between text-sm/6">
+                <label for="message" class="block font-semibold text-gray-900">
+                  Message
+                </label>
+                <p class="text-gray-400">Required</p>
+              </div>
+
+              <div class="mt-2.5">
+                <textarea
+                  class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                  name="message"
+                  id="message"
+                  rows="4"
+                  required></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-end">
+            <SubmitButton>Send message</SubmitButton>
+          </div>
+        </form>
+      </div>
+    </div>
   </Container>
 </Layout>

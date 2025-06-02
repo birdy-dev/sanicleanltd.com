@@ -11,9 +11,22 @@ const isActive = href === pathname || href === `/${subpath?.[0] || ""}`;
 
 <a
   href={href}
-  class:list={[className, "data-[active]:font-bold"]}
+  class:list={[
+    className,
+    "block relative px-6 py-3 bg-white text-foreground/80 font-semibold shadow-lg",
+    "data-[active]:bg-gray-100 data-active:text-foreground",
+    "group hover:text-brand-600",
+  ]}
   {...props}
   {...isActive && { "data-active": "" }}
 >
   <slot />
+  <div
+    class:list={[
+      "absolute bottom-0 inset-x-0 h-1.25 w-full bg-gray-300 transition-all",
+      "invisible group-hover:visible group-hover:animate-in fade-in slide-in-from-bottom",
+      "animate-out fade-out slide-out-to-bottom",
+    ]}
+  >
+  </div>
 </a>

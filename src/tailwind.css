@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 @theme {
   --font-sans: "Inter Variable", "sans-serif";
@@ -13,6 +14,9 @@
   --color-brand-800: #1b506f;
   --color-brand-900: #1b435e;
   --color-brand-950: #0c2a40;
+
+  --color-background: #1b6cb8;
+  --color-foreground: #4b4b4b;
 
 
   --animate-marquee: marquee 30s linear infinite;

@@ -18,6 +18,9 @@
   --color-background: #1b6cb8;
   --color-foreground: #4b4b4b;
 
+  --slide-height: 19rem;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
 
   --animate-marquee: marquee 30s linear infinite;
   @keyframes marquee {

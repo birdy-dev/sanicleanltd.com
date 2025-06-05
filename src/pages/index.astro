@@ -3,10 +3,12 @@ import { Image } from "astro:assets";
 import ClientCloud from "@/components/client_cloud.astro";
 import Layout from "./_layout.astro";
 import LinkButton from "@/components/ui/link_button.astro";
+import { Carousel } from "@/components/blocks/carousel";
 ---
 
 <Layout>
   <!-- Hero -->
+  <Carousel client:load slides={[0, 1, 2]} options={{ loop: true }} />
   <div class="overflow-hidden">
     <div class="mx-auto max-w-7xl px-6 pt-36 pb-32 sm:pt-60 lg:px-8 lg:pt-32">
       <div

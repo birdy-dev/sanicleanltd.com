@@ -4,7 +4,7 @@ import {
   PopoverButton,
   PopoverPanel,
 } from "@headlessui/react";
-import menuIcon from "../icons/menu.svg";
+import menuIcon from "../../icons/menu.svg";
 import { type PropsWithChildren } from "react";
 
 export function MobileNav(props: PropsWithChildren) {

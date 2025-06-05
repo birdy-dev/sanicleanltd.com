@@ -4,11 +4,52 @@ import ClientCloud from "@/components/client_cloud.astro";
 import Layout from "./_layout.astro";
 import LinkButton from "@/components/ui/link_button.astro";
 import { Carousel } from "@/components/blocks/carousel";
+
+import carousel1Corporate from "../images/home/carousel_1_corporate.jpg";
+import carousel2Health from "../images/home/carousel_2_health.jpg";
+import carousel3Lounge from "../images/home/carousel_3_lounge.jpg";
+import carousel4Wem from "../images/home/carousel_4_wem.jpg";
+import carousel5Calgary from "../images/home/carousel_5_calgary.jpg";
 ---
 
 <Layout>
   <!-- Hero -->
-  <Carousel client:load slides={[0, 1, 2]} options={{ loop: true }} />
+  <Carousel
+    client:load
+    slides={[
+      {
+        image: carousel1Corporate.src,
+        alt: "Boardroom",
+        title: "Corporate office cleaning",
+        caption: "Daily to Weekly service",
+      },
+      {
+        image: carousel2Health.src,
+        alt: "Dental office",
+        title: "Clinics and Institions",
+        caption: "For a germ free environment",
+      },
+      {
+        image: carousel3Lounge.src,
+        alt: "Lawyer's lounge",
+        title: "Full Janitorial Service & Building Maintenance",
+        caption: "There when you need us",
+      },
+      {
+        image: carousel4Wem.src,
+        alt: "West Edmonton Mall",
+        title: "Restaurant & Retail",
+        caption: "Cleanliness makes an outstanding presentation",
+      },
+      {
+        image: carousel5Calgary.src,
+        alt: "Calgary downtown skyline",
+        title: "Serving Alberta & Surrounding Area",
+        caption: "Service second to none",
+      },
+    ]}
+    options={{ loop: true }}
+  />
   <div class="overflow-hidden">
     <div class="mx-auto max-w-7xl px-6 pt-36 pb-32 sm:pt-60 lg:px-8 lg:pt-32">
       <div

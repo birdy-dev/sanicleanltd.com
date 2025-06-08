@@ -6,6 +6,7 @@ import {
 } from "react";
 import type { EmblaCarouselType, EmblaOptionsType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
+import Fade from "embla-carousel-fade";
 import useEmblaCarousel from "embla-carousel-react";
 
 type Slide = {
@@ -20,10 +21,11 @@ type Props = {
   options?: EmblaOptionsType;
 };
 
-function Carousel(props: Props) {
+function HeroCarousel(props: Props) {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     Autoplay({ delay: 3000 }),
+    Fade(),
   ]);
 
   const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
@@ -43,29 +45,34 @@ function Carousel(props: Props) {
   );
 
   return (
-    <section>
-      <div className="relative overflow-hidden" ref={emblaRef}>
+    <section className="bg-background">
+      <div
+        className="relative overflow-hidden max-w-[1900px] mx-auto"
+        ref={emblaRef}
+      >
         <div className="flex">
           {slides.map((slide) => (
             <div
               className="flex-[0_0_var(--slide-size)] pl-[var(--slide-spacing)]min-w-0"
               key={slide.title}
             >
-              <div className="relative h-[var(--slide-height)] select-none">
+              <div className="relative h-[calc(var(--slide-height)*0.7)] md:h-[var(--slide-height)] max-w-full select-none">
                 <img
-                  className="size-full object-fill"
+                  className="size-full object-cover"
                   src={slide.image}
-                  height="300"
-                  alt=""
+                  height="500"
+                  alt={slide.alt}
                 />
-                <div className="absolute inset-0 shadow-[inset_0_0_0_0.2rem_var(--detail-medium-contrast)] flex items-center justify-center z-10">
-                  <div className="flex flex-col items-end">
-                    <span className="px-4 py-1.5 text-3xl max-w-md font-semibold uppercase bg-brand-600/85 text-white">
-                      {slide.title}
-                    </span>
-                    <span className="px-3 py-1.5 text-2xl italic max-w-md bg-white/70">
-                      {slide.caption}
-                    </span>
+                <div className="absolute bottom-0 md:inset-0 z-10">
+                  <div className="flex h-full md:max-w-screen-md lg:max-w-screen-lg mx-auto items-center justify-end">
+                    <div className="relative flex flex-col items-end">
+                      <h2 className="px-4 py-1.5 text-4xl leading-8 w-full max-w-md font-bold uppercase bg-background/80 text-white">
+                        {slide.title}
+                      </h2>
+                      <h3 className="relative -right-5 w-[26rem] hidden md:block px-3 py-1 text-2xl italic bg-white/70">
+                        {slide.caption}
+                      </h3>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -77,9 +84,10 @@ function Carousel(props: Props) {
           <div className="flex gap-2.5 items-center">
             {scrollSnaps.map((_, index) => (
               <DotButton
+                // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 key={index}
                 onClick={() => onDotButtonClick(index)}
-                className={"flex items-center justify-center border-3 border-white touch-manipulation no-underline cursor-pointer p-0 m-0 size-6 rounded-full appearance-none data-[selected]:bg-white"}
+                className={"flex items-center justify-center border-2 border-white touch-manipulation no-underline cursor-pointer p-0 m-0 size-4 rounded-full appearance-none data-[selected]:bg-white"}
                 data-selected={index === selectedIndex ? "" : undefined}
               />
             ))}
@@ -145,4 +153,4 @@ function DotButton(props: ComponentPropsWithRef<"button">) {
   );
 }
 
-export { Carousel };
+export { HeroCarousel as Carousel };

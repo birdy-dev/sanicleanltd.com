@@ -10,27 +10,28 @@
 		"preview": "astro preview"
 	},
 	"dependencies": {
-		"@astrojs/react": "^4.2.7",
+		"@astrojs/react": "^4.3.0",
 		"@fontsource-variable/inter": "^5.2.5",
 		"@fontsource-variable/roboto": "^5.2.5",
 		"@headlessui/react": "^2.2.4",
-		"@tailwindcss/vite": "^4.1.7",
-		"@types/react": "^19.1.5",
-		"@types/react-dom": "^19.1.5",
-		"astro": "^5.7.14",
+		"@tailwindcss/vite": "^4.1.8",
+		"@types/react": "^19.1.6",
+		"@types/react-dom": "^19.1.6",
+		"astro": "^5.9.0",
 		"astro-icon": "^1.1.5",
 		"embla-carousel": "^8.6.0",
 		"embla-carousel-autoplay": "^8.6.0",
+		"embla-carousel-fade": "^8.6.0",
 		"embla-carousel-react": "^8.6.0",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
 		"sharp": "^0.34.2",
-		"tailwindcss": "^4.1.7",
-		"tw-animate-css": "^1.3.3",
+		"tailwindcss": "^4.1.8",
+		"tw-animate-css": "^1.3.4",
 		"vite": "^6.3.5"
 	},
 	"devDependencies": {
-		"@types/node": "^22.15.21",
+		"@types/node": "^22.15.30",
 		"typescript": "^5.8.3"
 	}
 }

@@ -4,6 +4,8 @@ type Props = HTMLAttributes<"div">;
 const { class: className, ...props } = Astro.props;
 ---
 
-<div class:list={[className, "max-w-4xl mx-3 lg:mx-auto"]} {...props}>
-  <slot />
+<div class:list={[className, "w-full"]} {...props}>
+  <div class="max-w-4xl mx-3 lg:mx-auto">
+    <slot />
+  </div>
 </div>

@@ -10,6 +10,14 @@ import carousel2Health from "../images/home/carousel_2_health.jpg";
 import carousel3Lounge from "../images/home/carousel_3_lounge.jpg";
 import carousel4Wem from "../images/home/carousel_4_wem.jpg";
 import carousel5Calgary from "../images/home/carousel_5_calgary.jpg";
+
+import services1 from "../images/home/services_1.png";
+import services3 from "../images/home/services_3.png";
+import saniclean from "../images/home/saniclean.png";
+
+import Container from "@/components/Container.astro";
+import { SITE_CONTACT } from "@/consts";
+import ServiceCard from "@/components/blocks/service_card.astro";
 ---
 
 <Layout>
@@ -50,181 +58,225 @@ import carousel5Calgary from "../images/home/carousel_5_calgary.jpg";
     ]}
     options={{ loop: true }}
   />
-  <div class="overflow-hidden">
-    <div class="mx-auto max-w-7xl px-6 pt-36 pb-32 sm:pt-60 lg:px-8 lg:pt-32">
-      <div
-        class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center"
-      >
-        <div class="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
-          <h1
-            class="text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl"
-          >
-            Professional Cleaning Without the Stress
-          </h1>
-          <p
-            class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none"
-          >
-            Partner with Saniclean for commercial office cleaning and janitorial
-            services you can count on. We specialize in recurring and ongoing
-            cleaning with flexible billing options.
-          </p>
-          <div class="mt-10 flex items-center gap-x-6">
-            <LinkButton href="/contact">Free Estimate</LinkButton>
 
-            <a href="/services" class="text-sm/6 font-semibold text-gray-900"
-              >Services <span aria-hidden="true">→</span></a
+  <section class="relative z-10">
+    <div
+      class="absolute w-full h-[15%] bottom-1.5 rounded-[47%] -z-10 shadow-[0_4px_14px_rgba(0,0,0,0.4)]"
+    >
+    </div>
+
+    <Container class="bg-white">
+      <div class="pb-8 pt-4">
+        <h1 class="text-4xl py-4 font-extralight text-gray-700 text-center">
+          SANICLEAN<br />Cleaning and Maintenance Is What We Do Best
+        </h1>
+        <p class="text-brand-600 italic text-center">
+          We provide janitorial building maintenance and commercial cleaning
+          services in Alberta and surrounding areas
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <section class="bg-gray-100 py-16">
+    <Container>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <ServiceCard image={services1}>
+          <div slot="heading">24 Hour<br />Emergency Service</div>
+          <Fragment slot="content">
+            <p>
+              At Saniclean, we are there for our clients 24/7. This service only
+              available to clients.
+              <span class="block font-bold text-center"
+                >{SITE_CONTACT.phone}</span
+              >
+            </p>
+          </Fragment>
+        </ServiceCard>
+        <ServiceCard image={saniclean}>
+          <div slot="heading"></div>
+          <div slot="content"></div>
+        </ServiceCard>
+        <ServiceCard image={services3}>
+          <div slot="heading">Floor Finishing & Carpet Cleaning</div>
+          <div slot="content">
+            In addition to full carpet cleaning, we offer complete floor
+            cleaning, stripping, refinishing, and waxing services
+          </div>
+        </ServiceCard>
+      </div>
+    </Container>
+  </section>
+</Layout>
+
+<div class="overflow-hidden">
+  <div class="mx-auto max-w-7xl px-6 pt-36 pb-32 sm:pt-60 lg:px-8 lg:pt-32">
+    <div
+      class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center"
+    >
+      <div class="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
+        <h1
+          class="text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl"
+        >
+          Professional Cleaning Without the Stress
+        </h1>
+        <p
+          class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none"
+        >
+          Partner with Saniclean for commercial office cleaning and janitorial
+          services you can count on. We specialize in recurring and ongoing
+          cleaning with flexible billing options.
+        </p>
+        <div class="mt-10 flex items-center gap-x-6">
+          <LinkButton href="/contact">Free Estimate</LinkButton>
+
+          <a href="/services" class="text-sm/6 font-semibold text-gray-900"
+            >Services <span aria-hidden="true">→</span></a
+          >
+        </div>
+      </div>
+
+      <div
+        class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0"
+      >
+        <div
+          class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80"
+        >
+          <div class="relative">
+            <Image
+              class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+              src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+              alt="Boardroom"
+              width="300"
+              height="400"
+            />
+            <div
+              class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"
             >
+            </div>
           </div>
         </div>
-
-        <div
-          class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0"
-        >
-          <div
-            class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80"
-          >
-            <div class="relative">
-              <Image
-                class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                alt="Boardroom"
-                width="300"
-                height="400"
-              />
-              <div
-                class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"
-              >
-              </div>
+        <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+          <div class="relative">
+            <Image
+              class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+              src="https://images.unsplash.com/photo-1662837775283-16e2f4bdff85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+              alt="Dental office"
+              width="300"
+              height="400"
+            />
+            <div
+              class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"
+            >
             </div>
           </div>
-          <div
-            class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36"
-          >
-            <div class="relative">
-              <Image
-                class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                src="https://images.unsplash.com/photo-1662837775283-16e2f4bdff85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                alt="Dental office"
-                width="300"
-                height="400"
-              />
-              <div
-                class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"
-              >
-              </div>
-            </div>
-            <div class="relative">
-              <Image
-                class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                src="https://images.unsplash.com/photo-1636405189493-181ecf851006?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
-                alt="Restaurant"
-                width="300"
-                height="400"
-              />
-              <div
-                class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"
-              >
-              </div>
+          <div class="relative">
+            <Image
+              class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+              src="https://images.unsplash.com/photo-1636405189493-181ecf851006?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
+              alt="Restaurant"
+              width="300"
+              height="400"
+            />
+            <div
+              class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"
+            >
             </div>
           </div>
-          <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
-            <div class="relative">
-              <Image
-                class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                src="https://images.unsplash.com/photo-1723877896989-a27280d7b37b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=396&h=528&q=80"
-                alt="Classroom"
-                width="300"
-                height="400"
-              />
-              <div
-                class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"
-              >
-              </div>
+        </div>
+        <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+          <div class="relative">
+            <Image
+              class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+              src="https://images.unsplash.com/photo-1723877896989-a27280d7b37b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=396&h=528&q=80"
+              alt="Classroom"
+              width="300"
+              height="400"
+            />
+            <div
+              class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"
+            >
             </div>
-            <div class="relative">
-              <Image
-                class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                src="https://images.unsplash.com/photo-1698133468867-1cb3e8a59f5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                alt="Retail store"
-                width="300"
-                height="400"
-              />
-              <div
-                class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"
-              >
-              </div>
+          </div>
+          <div class="relative">
+            <Image
+              class="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+              src="https://images.unsplash.com/photo-1698133468867-1cb3e8a59f5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+              alt="Retail store"
+              width="300"
+              height="400"
+            />
+            <div
+              class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-gray-900/10 ring-inset"
+            >
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <section>
-    <ClientCloud />
-  </section>
+<section>
+  <ClientCloud />
+</section>
 
-  <!-- Statistics -->
-  <section class="py-24 sm:py-32" id="statistics">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl lg:max-w-none">
-        <div class="text-center">
-          <h2
-            class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl"
-          >
-            Committed to your satisfaction
-          </h2>
-          <p class="mt-4 text-lg/8 text-gray-600">
-            We strive to a earn your trust and confidence with every job we do.
-          </p>
-        </div>
-        <dl
-          class="mt-16 py-5 grid grid-cols-1 gap-0.5 overflow-hidden bg-brand-100 rounded-full text-center sm:grid-cols-2 lg:grid-cols-4"
+<!-- Statistics -->
+<section class="py-24 sm:py-32" id="statistics">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:max-w-none">
+      <div class="text-center">
+        <h2
+          class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl"
         >
-          <div class="flex flex-col p-8">
-            <dt class="text-sm/6 font-semibold text-gray-600">
-              Jobs completed
-            </dt>
-            <dd
-              class="order-first text-3xl font-semibold tracking-tight text-gray-900"
-            >
-              1,000+
-            </dd>
-          </div>
-          <div class="flex flex-col p-8">
-            <dt class="text-sm/6 font-semibold text-gray-600">
-              Serving clients
-            </dt>
-            <dd
-              class="order-first text-3xl font-semibold tracking-tight text-gray-900"
-            >
-              16+ years
-            </dd>
-          </div>
-          <div class="flex flex-col p-8">
-            <dt class="text-sm/6 font-semibold text-gray-600">
-              Emergency service
-            </dt>
-            <dd
-              class="order-first text-3xl font-semibold tracking-tight text-gray-900"
-            >
-              24/7
-            </dd>
-          </div>
-          <div class="flex flex-col p-8">
-            <dt class="text-sm/6 font-semibold text-gray-600">BBB Rating</dt>
-            <dd
-              class="order-first text-3xl font-semibold tracking-tight text-gray-900"
-            >
-              A+
-            </dd>
-          </div>
-        </dl>
+          Committed to your satisfaction
+        </h2>
+        <p class="mt-4 text-lg/8 text-gray-600">
+          We strive to a earn your trust and confidence with every job we do.
+        </p>
       </div>
+      <dl
+        class="mt-16 py-5 grid grid-cols-1 gap-0.5 overflow-hidden bg-brand-100 rounded-full text-center sm:grid-cols-2 lg:grid-cols-4"
+      >
+        <div class="flex flex-col p-8">
+          <dt class="text-sm/6 font-semibold text-gray-600">Jobs completed</dt>
+          <dd
+            class="order-first text-3xl font-semibold tracking-tight text-gray-900"
+          >
+            1,000+
+          </dd>
+        </div>
+        <div class="flex flex-col p-8">
+          <dt class="text-sm/6 font-semibold text-gray-600">Serving clients</dt>
+          <dd
+            class="order-first text-3xl font-semibold tracking-tight text-gray-900"
+          >
+            16+ years
+          </dd>
+        </div>
+        <div class="flex flex-col p-8">
+          <dt class="text-sm/6 font-semibold text-gray-600">
+            Emergency service
+          </dt>
+          <dd
+            class="order-first text-3xl font-semibold tracking-tight text-gray-900"
+          >
+            24/7
+          </dd>
+        </div>
+        <div class="flex flex-col p-8">
+          <dt class="text-sm/6 font-semibold text-gray-600">BBB Rating</dt>
+          <dd
+            class="order-first text-3xl font-semibold tracking-tight text-gray-900"
+          >
+            A+
+          </dd>
+        </div>
+      </dl>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="faq"></section>
+<section id="faq"></section>
 
-  <section id="calling card"></section>
-</Layout>
+<section id="calling card"></section>

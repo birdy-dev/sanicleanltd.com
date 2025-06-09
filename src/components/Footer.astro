@@ -1,17 +1,20 @@
 ---
 import { LEGAL_NAME } from "../consts";
+import FloatingPanel from "./floating_panel.astro";
 
 const today = new Date();
 ---
 
-<footer class="py-18 space-y-6">
-  <div class="flex justify-center gap-4">
-    <a href="/privacy-policy">Privacy Policy</a>
-    <a href="/terms-of-service">Terms of Service</a>
-  </div>
+<FloatingPanel shadow="t">
+  <footer class="py-18 space-y-6">
+    <div class="flex justify-center gap-4">
+      <a class="hover:underline" href="/privacy-policy">Privacy Policy</a>
+      <a class="hover:underline" href="/terms-of-service">Terms of Service</a>
+    </div>
 
-  <div class="text-center">
-    &copy; 2016 - {today.getFullYear()}
-    {LEGAL_NAME}. All rights reserved.
-  </div>
-</footer>
+    <div class="text-center">
+      &copy; 2016 - {today.getFullYear()}
+      {LEGAL_NAME}. All rights reserved.
+    </div>
+  </footer>
+</FloatingPanel>

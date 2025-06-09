@@ -1,0 +1,28 @@
+---
+interface Props {
+  shadow?: "t" | "b" | "y";
+}
+const { shadow } = Astro.props;
+---
+
+<div class="relative z-10">
+  <div
+    class:list={[
+      "absolute w-full h-[15%] rounded-[47%] -z-10 shadow-[0_4px_14px_rgba(0,0,0,0.4)]",
+      shadow === "t" || shadow === "y" ? "top-0" : "hidden",
+    ]}
+  >
+  </div>
+
+  <div class="bg-white">
+    <slot />
+  </div>
+
+  <div
+    class:list={[
+      "absolute w-full h-[15%] rounded-[47%] -z-10 shadow-[0_4px_14px_rgba(0,0,0,0.4)]",
+      shadow === "b" || shadow === "y" ? "bottom-1.5" : "hidden",
+    ]}
+  >
+  </div>
+</div>

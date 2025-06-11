@@ -1,11 +1,18 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-type Props = HTMLAttributes<"div">;
-const { class: className, ...props } = Astro.props;
+type Props = { size?: "sm" | "base" | "lg" } & HTMLAttributes<"div">;
+const { size = "base", class: className, ...props } = Astro.props;
 ---
 
 <div class:list={[className, "w-full"]} {...props}>
-  <div class="max-w-screen-lg mx-3 lg:mx-auto">
+  <div
+    class:list={[
+      "mx-3 lg:mx-auto",
+      size === "sm" && "max-w-screen-lg",
+      size === "base" && "max-w-screen-xl",
+      size === "lg" && "max-w-screen-2xl",
+    ]}
+  >
     <slot />
   </div>
 </div>

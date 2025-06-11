@@ -6,15 +6,16 @@ const today = new Date();
 ---
 
 <FloatingPanel shadow="t">
-  <footer class="py-18 space-y-6">
-    <div class="flex justify-center gap-4">
-      <a class="hover:underline" href="/privacy-policy">Privacy Policy</a>
-      <a class="hover:underline" href="/terms-of-service">Terms of Service</a>
-    </div>
-
-    <div class="text-center">
-      &copy; 2016 - {today.getFullYear()}
-      {LEGAL_NAME}. All rights reserved.
+  <footer class="py-8">
+    <div class="text-center text-sm text-gray-600">
+      &copy; Copyright 2016 - {today.getFullYear()}
+      {LEGAL_NAME}
+      | <a class="text-blue-600 hover:underline" href="/privacy-policy"
+        >Privacy Policy</a
+      >
+      | <a class="text-blue-600 hover:underline" href="/terms-of-service"
+        >Terms of Service</a
+      >
     </div>
   </footer>
 </FloatingPanel>

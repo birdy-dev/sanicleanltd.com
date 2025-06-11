@@ -1,10 +1,60 @@
 ---
 import Container from "../components/Container.astro";
 import Layout from "./_layout.astro";
+import { Image } from "astro:assets";
+import aboutBanner from "../images/about/about_banner.png";
 ---
 
-<Layout title="About Me" description="Lorem ipsum dolor sit amet">
+<Layout title="About Us" description="">
   <Container>
     <h1 class="text-brand-600 text-3xl font-light py-6">About Us</h1>
+  </Container>
+
+  <Container class="bg-gray-100">
+    <Image
+      class="border-b-8 border-background"
+      src={aboutBanner}
+      height="341"
+      width={1280}
+      alt="Elevators and cleaning cart"
+    />
+  </Container>
+
+  <Container class="bg-gray-100" size="sm">
+    <div class="py-16 space-y-4 text-gray-700">
+      <p>
+        At Saniclean, we are committed to our client's satisfaction. We strive
+        to a earn your trust as well as your business. We've been in the
+        commercial cleaning and maintenance industry for over 15 years.
+      </p>
+
+      <p>
+        Anna Cartagena, founder of Saniclean, is second generation in the
+        cleaning and maintenance industry. Growing up, she learned the
+        importance of an organized and clean business/home environment, and the
+        difference that it makes in the way that it represents itself. In
+        addition, she understands that living/working in a germ controlled
+        environment is imperative.
+      </p>
+
+      <p>
+        At Saniclean, we strive to keep a good relationship with our customers
+        and staff. In order to become part of the Saniclean team, all our staff
+        are screened via thorough background checks with local law enforcement.
+        They also are required to attend extensive ongoing training sessions
+        that constantly re-envision them of the company's high standards.
+      </p>
+
+      <p>
+        We value our staff, and therefore, have a long-term working relationship
+        with them. This relationship allows our customers a sense of security
+        and trust, knowing who is working in their homes and place of business.
+      </p>
+
+      <p>
+        Most services are available on a two-hour notice. We also provide a 24
+        hour emergency calling service.
+      </p>
+    </div>
   </Container>
 </Layout>

@@ -4,6 +4,9 @@ import Container from "../components/Container.astro";
 import Layout from "./_layout.astro";
 import { Icon } from "astro-icon/components";
 import SubmitButton from "@/components/ui/submit_button.astro";
+import { Image } from "astro:assets";
+
+import contactBanner from "../images/contact/contact_banner.png";
 ---
 
 <Layout title="Contact Saniclean" description="">
@@ -12,16 +15,23 @@ import SubmitButton from "@/components/ui/submit_button.astro";
   </Container>
 
   <Container class="bg-gray-100">
+    <Image
+      class="border-b-8 border-background"
+      src={contactBanner}
+      height="341"
+      width={1280}
+      alt="Elevators and cleaning cart"
+    />
+  </Container>
+
+  <Container class="bg-gray-100">
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 py-36">
-      <div class="mx-auto max-w-xl">
+      <div class="mx-auto max-w-xl space-y-6">
         <h2
           class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
         >
-          Get in touch
+          Contact us for a free estimate
         </h2>
-        <p class="mt-6 text-lg/8 text-gray-600">
-          Contact us for a <strong class="font-semibold">free estimate.</strong>
-        </p>
         <p class="text-lg/8 text-gray-600">
           Most services are available on a two-hour notice. We also provide a 24
           hour emergency calling service.
@@ -30,13 +40,13 @@ import SubmitButton from "@/components/ui/submit_button.astro";
         <div>
           <dl class="mt-10 space-y-4 text-base/7 text-gray-600">
             <div class="flex items-center gap-x-4">
-              <dt class="flex-none">
+              <dt class="flex-none rounded-full bg-background p-2">
                 <span class="sr-only">Telephone</span>
-                <Icon class="text-gray-400 size-6" name="phone" />
+                <Icon class="text-white size-6" name="phone" />
               </dt>
               <dd>
                 <a
-                  class="hover:text-gray-900"
+                  class="hover:text-gray-900 hover:underline"
                   href={`tel:${SITE_CONTACT.phone}`}
                 >
                   {SITE_CONTACT.phone}
@@ -44,13 +54,14 @@ import SubmitButton from "@/components/ui/submit_button.astro";
               </dd>
             </div>
             <div class="flex items-center gap-x-4">
-              <dt class="flex-none">
+              <dt class="flex-none rounded-full bg-background p-2">
                 <span class="sr-only">Email</span>
-                <Icon class="text-gray-400 size-6" name="envelope-simple" />
+                <Icon class="text-white size-6" name="envelope-simple" />
               </dt>
               <dd>
-                <a class="hover:text-gray-900" href="mailto:hello@example.com"
-                  >{SITE_CONTACT.email}</a
+                <a
+                  class="hover:text-gray-900 hover:underline"
+                  href="mailto:hello@example.com">{SITE_CONTACT.email}</a
                 >
               </dd>
             </div>

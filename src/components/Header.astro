@@ -4,60 +4,45 @@ import { SITE_CONTACT, SITE_TITLE } from "../consts";
 import { Image } from "astro:assets";
 import Logo from "./logo.png";
 import { MobileNav } from "./blocks/mobile_nav";
+import Container from "./Container.astro";
 ---
 
 <header class="bg-background text-white shadow-lg z-10">
-  <div
-    class="flex flex-wrap justify-between items-center px-8 pt-4 pb-2 max-w-screen-2xl mx-auto"
-  >
-    <div class="flex items-center gap-2 lg:gap-8">
-      <div>
-        <a href="/">
-          <Image
-            class={"h-18 md:h-24 w-fit object-contain object-center"}
-            src={Logo}
-            alt={SITE_TITLE}
-            width="300"
-            height="300"
-            loading="eager"
-          />
-        </a>
+  <Container>
+    <div class="flex flex-wrap justify-between items-center pt-4 pb-2">
+      <div class="flex items-center gap-2 lg:gap-8">
+        <div>
+          <a href="/">
+            <Image
+              class={"h-18 md:h-24 w-fit object-contain object-center"}
+              src={Logo}
+              alt={SITE_TITLE}
+              width="300"
+              height="300"
+              loading="eager"
+            />
+          </a>
+        </div>
+
+        <div class="flex flex-col text-shadow-xs text-shadow-black p-2">
+          <a
+            class="text-2xl hover:underline font-bold"
+            href={`tel:${SITE_CONTACT.phone}`}
+          >
+            {SITE_CONTACT.phone}
+          </a>
+
+          <span class="uppercase leading-4">Free Estimates</span>
+
+          <a class="text hover:underline" href={`mailto:${SITE_CONTACT.email}`}>
+            {SITE_CONTACT.email}</a
+          >
+        </div>
       </div>
 
-      <div class="flex flex-col text-shadow-xs text-shadow-black p-2">
-        <a class="text-2xl hover:underline" href={`tel:${SITE_CONTACT.phone}`}>
-          {SITE_CONTACT.phone}
-        </a>
-
-        <span class="uppercase leading-4">Free Estimates</span>
-
-        <a class="text hover:underline" href={`mailto:${SITE_CONTACT.email}`}>
-          {SITE_CONTACT.email}</a
-        >
-      </div>
-    </div>
-
-    <div class="flex justify-center">
-      <nav>
-        <ul class="hidden md:flex divide-x divide-gray-300">
-          <li>
-            <HeaderLink href="/">Home</HeaderLink>
-          </li>
-          <li>
-            <HeaderLink href="/services">Services</HeaderLink>
-          </li>
-          <li>
-            <HeaderLink href="/about">About</HeaderLink>
-          </li>
-          <li>
-            <HeaderLink href="/contact">Contact</HeaderLink>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="md:hidden">
-        <MobileNav client:load>
-          <ul class="flex flex-col overflow-hidden">
+      <div class="flex justify-center">
+        <nav>
+          <ul class="hidden md:flex divide-x divide-gray-300">
             <li>
               <HeaderLink href="/">Home</HeaderLink>
             </li>
@@ -71,8 +56,27 @@ import { MobileNav } from "./blocks/mobile_nav";
               <HeaderLink href="/contact">Contact</HeaderLink>
             </li>
           </ul>
-        </MobileNav>
+        </nav>
+
+        <div class="md:hidden">
+          <MobileNav client:load>
+            <ul class="flex flex-col overflow-hidden">
+              <li>
+                <HeaderLink href="/">Home</HeaderLink>
+              </li>
+              <li>
+                <HeaderLink href="/services">Services</HeaderLink>
+              </li>
+              <li>
+                <HeaderLink href="/about">About</HeaderLink>
+              </li>
+              <li>
+                <HeaderLink href="/contact">Contact</HeaderLink>
+              </li>
+            </ul>
+          </MobileNav>
+        </div>
       </div>
     </div>
-  </div>
+  </Container>
 </header>

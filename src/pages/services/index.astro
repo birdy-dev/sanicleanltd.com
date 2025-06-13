@@ -1,0 +1,27 @@
+---
+import Container from "@/components/Container.astro";
+import Layout from "../_layout.astro";
+
+import { getStaticPaths } from "./[...slug].astro";
+
+const paths = await getStaticPaths();
+const fullyQualifiedPaths = paths.map((path) => {
+  return `${Astro.originPathname}/${path.params.slug}`;
+});
+---
+
+<Layout title="Services" description="">
+  <Container>
+    <h1 class="text-brand-600 text-3xl font-light py-6">
+      Commercial Cleaning Services
+    </h1>
+
+    {
+      fullyQualifiedPaths.map((path) => (
+        <div>
+          <a href={path}>{path}</a>
+        </div>
+      ))
+    }
+  </Container>
+</Layout>

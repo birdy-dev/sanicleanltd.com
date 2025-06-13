@@ -1,0 +1,55 @@
+---
+import { type CollectionEntry, getCollection, getEntries } from "astro:content";
+import { render } from "astro:content";
+import Layout from "../_layout.astro";
+import Container from "@/components/Container.astro";
+
+export async function getStaticPaths() {
+  const services = await getCollection("service");
+
+  const cities = ["edmonton", "calgary", "vancouver"];
+
+  const paths = [];
+
+  // Paths for just the service `services/{service}`
+  for (const service of services) {
+    paths.push({
+      params: {
+        slug: `${service.data.slug}`,
+      },
+      props: { service, city: undefined },
+    });
+  }
+
+  // Paths for city and service `services/{city}/{service}`
+  for (const city of cities) {
+    for (const service of services) {
+      paths.push({
+        params: {
+          slug: `${city}/${service.data.slug}`,
+        },
+        props: { service, city },
+      });
+    }
+  }
+
+  return paths;
+}
+
+type Props = { service: CollectionEntry<"service">; city: string };
+
+const entry = Astro.props;
+
+const { Content } = await render(entry.service);
+---
+
+<Layout>
+  <Container>
+    <h1 class="text-brand-600 text-3xl font-light py-6">
+      <span class="capitalize">{entry.city}</span>
+      <span class="capitalize">{entry.service.data.title}</span>
+    </h1>
+  </Container>
+
+  <Content />
+</Layout>

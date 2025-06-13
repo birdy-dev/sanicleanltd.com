@@ -5,23 +5,35 @@ import Layout from "../_layout.astro";
 import { getStaticPaths } from "./[...slug].astro";
 
 const paths = await getStaticPaths();
-const fullyQualifiedPaths = paths.map((path) => {
-  return `${Astro.originPathname}/${path.params.slug}`;
-});
+const fullyQualifiedPaths = paths
+  .filter((path) => !path.props.city)
+  .map((path) => {
+    return {
+      href: `${Astro.originPathname}/${path.params.slug}`,
+      label: path.props.service.data.title,
+    };
+  });
 ---
 
 <Layout title="Services" description="">
   <Container>
     <h1 class="text-brand-600 text-3xl font-light py-6">
-      Commercial Cleaning Services
+      Saniclean Commercial Cleaning Services
     </h1>
 
-    {
-      fullyQualifiedPaths.map((path) => (
-        <div>
-          <a href={path}>{path}</a>
-        </div>
-      ))
-    }
+    <div class="grid grid-cols-3 gap-8 py-8">
+      {
+        fullyQualifiedPaths.map((path) => (
+          <div>
+            <a
+              class="flex items-center justify-center bg-gray-100 p-16 rounded-lg"
+              href={path.href}
+            >
+              {path.label}
+            </a>
+          </div>
+        ))
+      }
+    </div>
   </Container>
 </Layout>

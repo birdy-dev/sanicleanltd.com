@@ -1,7 +1,8 @@
 ---
 slug: commercial-cleaning
-title: commercial cleaning
+title: Commercial Cleaning
 description: ""
+image: "./commercial_cleaning.jpg"
 ---
 
 Commercial Cleaning

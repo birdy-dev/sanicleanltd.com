@@ -1,17 +1,18 @@
 ---
 import { SITE_CONTACT } from "@/consts";
-import Container from "../components/Container.astro";
+import Container from "../components/container.astro";
 import Layout from "./_layout.astro";
 import { Icon } from "astro-icon/components";
 import SubmitButton from "@/components/ui/submit_button.astro";
 import { Image } from "astro:assets";
 
 import contactBanner from "../images/contact/contact_banner.png";
+import Heading from "@/components/ui/heading.astro";
 ---
 
 <Layout title="Contact Saniclean" description="">
   <Container>
-    <h1 class="text-brand-600 text-3xl font-light py-6">Contact Us</h1>
+    <Heading>Contact Us</Heading>
   </Container>
 
   <Container class="bg-gray-100">

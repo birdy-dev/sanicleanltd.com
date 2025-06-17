@@ -1,5 +1,5 @@
 ---
-import Container from "@/components/Container.astro";
+import Container from "@/components/container.astro";
 import Layout from "../_layout.astro";
 import { Image } from "astro:assets";
 
@@ -7,6 +7,7 @@ import servicesBanner from "../../images/services/services_banner.png";
 
 import { getStaticPaths } from "./[...slug].astro";
 import { Icon } from "astro-icon/components";
+import Heading from "@/components/ui/heading.astro";
 
 const paths = await getStaticPaths();
 const fullyQualifiedPaths = paths
@@ -39,9 +40,7 @@ const extraServices = [
 
 <Layout title="Services" description="">
   <Container>
-    <h1 class="inline-block text-brand-600 text-3xl font-light py-6">
-      Commercial Cleaning Services
-    </h1>
+    <Heading>Commercial Cleaning Services</Heading>
   </Container>
 
   <Container class="bg-gray-100">

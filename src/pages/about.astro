@@ -1,13 +1,14 @@
 ---
-import Container from "../components/Container.astro";
+import Container from "../components/container.astro";
 import Layout from "./_layout.astro";
 import { Image } from "astro:assets";
 import aboutBanner from "../images/about/about_banner.png";
+import Heading from "@/components/ui/heading.astro";
 ---
 
 <Layout title="About Us" description="">
   <Container>
-    <h1 class="text-brand-600 text-3xl font-light py-6">About Us</h1>
+    <Heading>About Us</Heading>
   </Container>
 
   <Container class="bg-gray-100">

@@ -49,6 +49,12 @@ function HeroCarousel(props: Props) {
       <div
         className="relative overflow-hidden max-w-[1900px] mx-auto"
         ref={emblaRef}
+        style={{
+          "--slide-width": "100%",
+          "--slide-height": "36rem",
+          "--slide-spacing": "1rem",
+          "--slide-size": "100%",
+        } as React.CSSProperties}
       >
         <div className="flex">
           {slides.map((slide) => (

@@ -1,8 +1,8 @@
 ---
-import { type CollectionEntry, getCollection, getEntries } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 import { render } from "astro:content";
 import Layout from "../_layout.astro";
-import Container from "@/components/Container.astro";
+import Container from "@/components/container.astro";
 
 export async function getStaticPaths() {
   const services = await getCollection("service");

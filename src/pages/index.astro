@@ -1,11 +1,8 @@
 ---
-import { Image } from "astro:assets";
 import Layout from "./_layout.astro";
 import { SITE_CONTACT } from "@/consts";
-import ClientCloud from "@/components/client_cloud.astro";
-import LinkButton from "@/components/ui/link_button.astro";
 import { Carousel } from "@/components/blocks/hero_carousel";
-import Container from "@/components/Container.astro";
+import Container from "@/components/container.astro";
 import ServiceCard from "@/components/blocks/service_card.astro";
 
 // carousel images
@@ -20,6 +17,8 @@ import services1 from "../images/home/services_1.png";
 import services3 from "../images/home/services_3.png";
 import saniclean from "../images/home/saniclean.png";
 import FloatingPanel from "@/components/floating_panel.astro";
+import Heading from "@/components/ui/heading.astro";
+import { ClientReviewCarousel } from "@/components/blocks/client_review_carousel";
 ---
 
 <Layout>
@@ -130,7 +129,7 @@ import FloatingPanel from "@/components/floating_panel.astro";
             <dd
               class="order-first text-3xl font-semibold tracking-tight text-gray-900"
             >
-              1,000+
+              24,000+
             </dd>
           </div>
           <div class="flex flex-col p-8">
@@ -140,12 +139,12 @@ import FloatingPanel from "@/components/floating_panel.astro";
             <dd
               class="order-first text-3xl font-semibold tracking-tight text-gray-900"
             >
-              16+ years
+              26+ years
             </dd>
           </div>
           <div class="flex flex-col p-8">
             <dt class="text-sm/6 font-semibold text-gray-600">
-              Emergency service
+              Service Available
             </dt>
             <dd
               class="order-first text-3xl font-semibold tracking-tight text-gray-900"
@@ -154,11 +153,13 @@ import FloatingPanel from "@/components/floating_panel.astro";
             </dd>
           </div>
           <div class="flex flex-col p-8">
-            <dt class="text-sm/6 font-semibold text-gray-600">BBB Rating</dt>
+            <dt class="text-sm/6 font-semibold text-gray-600">
+              Satisfaction Guarantee
+            </dt>
             <dd
               class="order-first text-3xl font-semibold tracking-tight text-gray-900"
             >
-              A+
+              100%
             </dd>
           </div>
         </dl>
@@ -169,4 +170,27 @@ import FloatingPanel from "@/components/floating_panel.astro";
   <section id="faq"></section>
 
   <section id="calling card"></section>
+
+  <Container slot="footer">
+    <div class="flex flex-col md:grid grid-cols-5 gap-20 pb-32">
+      <div class="col-span-3">
+        <Heading level="h2">Guaranteed Satisfaction</Heading>
+        <p class="text-gray-600">
+          At Saniclean, your satisfaction is guaranteed. If, for any reason, you
+          need to contact us, we are never more than just a telephone call away.
+          24 hours a day. It is our attention to detail as well as our unmatched
+          customer service that provides us with our ever increasing list of
+          satisfied clients.
+        </p>
+      </div>
+
+      <div class="col-span-2">
+        <ClientReviewCarousel
+          client:load
+          slides={[0, 1, 2]}
+          options={{ loop: true }}
+        />
+      </div>
+    </div>
+  </Container>
 </Layout>

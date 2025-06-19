@@ -6,6 +6,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import Heading from "../ui/heading.astro";
 
 type UsePrevNextButtonsType = {
   prevBtnDisabled: boolean;
@@ -98,8 +99,14 @@ function NextButton(props: ButtonProps) {
   );
 }
 
+type Slide = {
+  message: string;
+  name: string;
+  company?: string;
+};
+
 type CarouselProps = {
-  slides: number[];
+  slides: Slide[];
   options?: EmblaOptionsType;
 };
 
@@ -117,29 +124,80 @@ function ClientReviewCarousel(props: CarouselProps) {
   return (
     <div
       style={{
-        "--slide-height": "16rem",
+        "--slide-height": "12rem",
         "--slide-spacing": "1rem",
         "--slide-size": "100%",
       } as React.CSSProperties}
     >
+      <div className="flex justify-between items-baseline">
+        <div className="text-brand-600 text-3xl font-light py-6">
+          What clients say
+        </div>
+
+        <div className="flex gap-4">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        </div>
+      </div>
+
       <div className="overflow-clip w-full" ref={emblaRef}>
         <div className="flex touch-pan-y touch-pinch-zoom -ml-[var(--slide-spacing)]">
-          {slides.map((index) => (
+          {slides.map((slide, index) => (
             <div
               className="transform-gpu flex-[0_0_var(--slide-size)] min-w-0 pl-[var(--slide-spacing)]"
+              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
               key={index}
             >
-              <div className="border border-gray-300 rounded-lg text-4xl font-semibold flex items-center justify-center h-[var(--slide-height)] select-none">
-                Review from: {index + 1}
+              <div className="flex flex-col justify-between bg-gray-100 rounded-lg h-[var(--slide-height)] px-4 py-3">
+                <div className="w-full text-center">
+                  <svg
+                    className="block rotate-180 fill-gray-300 text-gray-300 size-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <title>Opengin</title>
+                    <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                    <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                  </svg>
+
+                  <span className="inline-block py-2 font-semibold text-gray-600 italic">
+                    {slide.message}
+                  </span>
+
+                  <svg
+                    className="block fill-gray-300 text-gray-300 ml-auto size-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <title>Closing quote</title>
+                    <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                    <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                  </svg>
+                </div>
+                <div className="text-right py-2 italic leading-tight">
+                  <span className="block">{slide.name}</span>
+                  <span className="block text-sm text-gray-500 ">
+                    {slide.company}
+                  </span>
+                </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
-
-      <div className="grid grid-cols-2 gap-8 max-w-12 py-4">
-        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
       </div>
     </div>
   );

@@ -8,14 +8,17 @@ import { Image } from "astro:assets";
 
 import contactBanner from "../images/contact/contact_banner.png";
 import Heading from "@/components/ui/heading.astro";
+import FloatingPanel from "@/components/floating_panel.astro";
 ---
 
 <Layout title="Contact Saniclean" description="">
-  <Container>
-    <Heading>Contact Us</Heading>
-  </Container>
+  <FloatingPanel shadow="y">
+    <Container>
+      <Heading>Contact Us</Heading>
+    </Container>
+  </FloatingPanel>
 
-  <Container class="bg-gray-100">
+  <Container class="bg-gray-100 pt-16">
     <Image
       class="border-b-8 border-background"
       src={contactBanner}

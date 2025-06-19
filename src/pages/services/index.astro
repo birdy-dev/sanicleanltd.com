@@ -8,6 +8,7 @@ import servicesBanner from "../../images/services/services_banner.png";
 import { getStaticPaths } from "./[...slug].astro";
 import { Icon } from "astro-icon/components";
 import Heading from "@/components/ui/heading.astro";
+import FloatingPanel from "@/components/floating_panel.astro";
 
 const paths = await getStaticPaths();
 const fullyQualifiedPaths = paths
@@ -39,9 +40,11 @@ const extraServices = [
 ---
 
 <Layout title="Services" description="">
-  <Container>
-    <Heading>Commercial Cleaning Services</Heading>
-  </Container>
+  <FloatingPanel shadow="y">
+    <Container>
+      <Heading>Commercial Cleaning Services</Heading>
+    </Container>
+  </FloatingPanel>
 
   <Container class="bg-gray-100">
     <div class="space-y-20">

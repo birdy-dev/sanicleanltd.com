@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "./_layout.astro";
 import { SITE_CONTACT } from "@/consts";
 import { Carousel } from "@/components/blocks/hero_carousel";
@@ -22,49 +23,50 @@ import { ClientReviewCarousel } from "@/components/blocks/client_review_carousel
 ---
 
 <Layout>
-  <!-- Hero -->
-  <Carousel
-    client:load
-    slides={[
-      {
-        image: carousel1Corporate.src,
-        alt: "Boardroom",
-        title: "Corporate office cleaning",
-        caption: "Daily to Weekly service",
-      },
-      {
-        image: carousel2Health.src,
-        alt: "Dental office",
-        title: "Clinics and Institions",
-        caption: "For a germ free environment",
-      },
-      {
-        image: carousel3Lounge.src,
-        alt: "Lawyer's lounge",
-        title: "Full Janitorial Service & Building Maintenance",
-        caption: "There when you need us",
-      },
-      {
-        image: carousel4Wem.src,
-        alt: "West Edmonton Mall",
-        title: "Restaurant & Retail",
-        caption: "Cleanliness makes an outstanding presentation",
-      },
-      {
-        image: carousel5Calgary.src,
-        alt: "Calgary downtown skyline",
-        title: "Serving Alberta & Surrounding Area",
-        caption: "Service second to none",
-      },
-    ]}
-    options={{ loop: true }}
-  />
+  <FloatingPanel shadow="y">
+    <Carousel
+      client:load
+      slides={[
+        {
+          image: carousel1Corporate.src,
+          alt: "Boardroom",
+          title: "Corporate office cleaning",
+          caption: "Daily to Weekly service",
+        },
+        {
+          image: carousel2Health.src,
+          alt: "Dental office",
+          title: "Clinics and Institions",
+          caption: "For a germ free environment",
+        },
+        {
+          image: carousel3Lounge.src,
+          alt: "Lawyer's lounge",
+          title: "Full Janitorial Service & Building Maintenance",
+          caption: "There when you need us",
+        },
+        {
+          image: carousel4Wem.src,
+          alt: "West Edmonton Mall",
+          title: "Restaurant & Retail",
+          caption: "Cleanliness makes an outstanding presentation",
+        },
+        {
+          image: carousel5Calgary.src,
+          alt: "Calgary downtown skyline",
+          title: "Serving Alberta & Surrounding Area",
+          caption: "Service second to none",
+        },
+      ]}
+      options={{ loop: true }}
+    />
+  </FloatingPanel>
 
   <section class="relative">
     <FloatingPanel shadow="b">
       <Container class="bg-white">
-        <div class="pb-8 pt-4">
-          <h1 class="text-4xl py-4 font-extralight text-gray-700 text-center">
+        <div class="py-16 space-y-4">
+          <h1 class="text-4xl font-extralight text-gray-700 text-center">
             SANICLEAN<br />Cleaning and Maintenance Is What We Do Best
           </h1>
           <p class="text-brand-600 italic text-center">
@@ -91,10 +93,18 @@ import { ClientReviewCarousel } from "@/components/blocks/client_review_carousel
             </p>
           </Fragment>
         </ServiceCard>
-        <ServiceCard image={saniclean}>
-          <div slot="heading"></div>
-          <div slot="content"></div>
-        </ServiceCard>
+        <div
+          class="flex items-center border border-gray-400 bg-[#e3e3e3] overflow-clip"
+        >
+          <Image
+            class="px-4 w-full object-cover object-center hover:scale-105 transition-transform"
+            src={saniclean}
+            alt="Smiling customer support agent"
+            width="300"
+            height="400"
+          />
+        </div>
+
         <ServiceCard image={services3}>
           <div slot="heading">Floor Finishing & Carpet Cleaning</div>
           <div slot="content">
@@ -187,7 +197,30 @@ import { ClientReviewCarousel } from "@/components/blocks/client_review_carousel
       <div class="col-span-2">
         <ClientReviewCarousel
           client:load
-          slides={[0, 1, 2]}
+          slides={[
+            {
+              message: "They are consistent in their cleaning quality.",
+              name: "Sandy Presley",
+              company: "Headquarters Building",
+            },
+            {
+              message:
+                "We love it how quickly you respond with your 24 hour call service.",
+              name: "Wanda Overcracker",
+              company: "Apex Warehouse Headquarters",
+            },
+            {
+              message: "I always know that I can depend on your service.",
+              name: "Lisa",
+              company: "Goodwin, CEO",
+            },
+            {
+              message:
+                "The floor of the Bingo looked like new. People keep asking me if we have replaced them.",
+              name: "Ramona Davidson",
+              company: "BINGO",
+            },
+          ]}
           options={{ loop: true }}
         />
       </div>

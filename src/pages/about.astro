@@ -4,14 +4,17 @@ import Layout from "./_layout.astro";
 import { Image } from "astro:assets";
 import aboutBanner from "../images/about/about_banner.png";
 import Heading from "@/components/ui/heading.astro";
+import FloatingPanel from "@/components/floating_panel.astro";
 ---
 
 <Layout title="About Us" description="">
-  <Container>
-    <Heading>About Us</Heading>
-  </Container>
+  <FloatingPanel shadow="y">
+    <Container>
+      <Heading>About Us</Heading>
+    </Container>
+  </FloatingPanel>
 
-  <Container class="bg-gray-100">
+  <Container class="bg-gray-100 pt-16">
     <Image
       class="border-b-8 border-background"
       src={aboutBanner}

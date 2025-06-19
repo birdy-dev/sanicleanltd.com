@@ -1,5 +1,6 @@
 ---
-import { LEGAL_NAME } from "../consts";
+import { Icon } from "astro-icon/components";
+import { LEGAL_NAME, SITE_CONTACT } from "../consts";
 import FloatingPanel from "./floating_panel.astro";
 
 const today = new Date();
@@ -8,6 +9,22 @@ const today = new Date();
 <FloatingPanel shadow="t">
   <footer class="py-8">
     <slot />
+
+    <div class="flex justify-center w-full gap-6 py-8">
+      <a
+        class="block w-fit rounded-full bg-gray-200 hover:bg-gray-300 p-2.5"
+        href={SITE_CONTACT.facebook}
+      >
+        <Icon class="size-6 text-gray-700" name="facebook" />
+      </a>
+      <a
+        class="block w-fit rounded-full bg-gray-200 hover:bg-gray-300 p-2.5"
+        href={SITE_CONTACT.linkedin}
+      >
+        <Icon class="size-6 text-gray-700" name="linkedin" />
+      </a>
+    </div>
+
     <div class="text-center text-sm text-gray-600">
       &copy; Copyright 2016 - {today.getFullYear()}
       {LEGAL_NAME}

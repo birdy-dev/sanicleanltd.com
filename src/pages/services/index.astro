@@ -9,6 +9,7 @@ import { getStaticPaths } from "./[...slug].astro";
 import { Icon } from "astro-icon/components";
 import Heading from "@/components/ui/heading.astro";
 import FloatingPanel from "@/components/floating_panel.astro";
+import { P } from "@/components/ui/text";
 
 const paths = await getStaticPaths();
 const fullyQualifiedPaths = paths
@@ -56,15 +57,15 @@ const extraServices = [
           width={1280}
           alt="Elevators and cleaning cart"
         />
-        <div class="text-lg text-gray-700">
-          <p>
+        <div class="text-lg">
+          <P>
             We have ongoing training for our staff and supervise constantly. We
-            love hearing from our customers. We have 24 hrs call service and we
+            love hearing from our customers. We have 24 hour call service and we
             provide you with a communication calendar for you to keep in contact
             with the cleaners as well.
-          </p>
+          </P>
           <br />
-          <p>Our staff wear tops to identify them as part of our team.</p>
+          <P>Our staff wear tops to identify them as part of our team.</P>
         </div>
       </section>
 

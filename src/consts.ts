@@ -8,6 +8,8 @@ export const SITE_DESCRIPTION =
 export const SITE_CONTACT = {
   phone: "780-708-1401",
   email: "anna@sanicleanltd.com",
+  facebook: "https://www.facebook.com/profile.php?id=100067633419677",
+  linkedin: "#",
 };
 
 export const LEGAL_NAME = "Saniclean Ltd";

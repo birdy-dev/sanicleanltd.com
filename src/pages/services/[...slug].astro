@@ -3,6 +3,9 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import { render } from "astro:content";
 import Layout from "../_layout.astro";
 import Container from "@/components/container.astro";
+import Heading from "@/components/ui/heading.astro";
+import { Image } from "astro:assets";
+import { P } from "@/components/ui/text";
 
 export async function getStaticPaths() {
   const services = await getCollection("service");
@@ -45,13 +48,30 @@ const { Content } = await render(entry.service);
 
 <Layout>
   <Container>
-    <h1 class="text-brand-600 text-3xl font-light py-6">
+    <Heading>
       <span class="capitalize">{entry.city}</span>
       <span class="capitalize">{entry.service.data.title}</span>
-    </h1>
+    </Heading>
   </Container>
 
-  <Container>
-    <Content />
-  </Container>
+  <section class="bg-gray-100">
+    <Container>
+      <div class="grid grid-cols-2 gap-16 py-16">
+        <div class="block text-lg">
+          <Content />
+        </div>
+        <Image
+          class="rounded shadow object-cover w-full h-[340px]"
+          src={entry.service.data.image}
+          width="630"
+          height="300"
+          alt={entry.service.data.title}
+        />
+      </div>
+    </Container>
+  </section>
+
+  <section>
+    <Container />
+  </section>
 </Layout>

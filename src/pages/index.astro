@@ -20,6 +20,7 @@ import saniclean from "../images/home/saniclean.png";
 import FloatingPanel from "@/components/floating_panel.astro";
 import Heading from "@/components/ui/heading.astro";
 import { ClientReviewCarousel } from "@/components/blocks/client_review_carousel";
+import { P } from "@/components/ui/text";
 ---
 
 <Layout>
@@ -83,15 +84,13 @@ import { ClientReviewCarousel } from "@/components/blocks/client_review_carousel
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <ServiceCard image={services1}>
           <div slot="heading">24 Hour<br />Emergency Service</div>
-          <Fragment slot="content">
-            <p>
-              At Saniclean, we are there for our clients 24/7. This service only
-              available to clients.
-              <span class="block font-bold text-center"
-                >{SITE_CONTACT.phone}</span
-              >
-            </p>
-          </Fragment>
+          <P slot="content">
+            At Saniclean, we are there for our clients 24/7. This service only
+            available to clients.
+            <span class="block font-bold text-center pt-4"
+              >{SITE_CONTACT.phone}</span
+            >
+          </P>
         </ServiceCard>
         <div
           class="flex items-center border border-gray-400 bg-[#e3e3e3] overflow-clip"
@@ -107,10 +106,10 @@ import { ClientReviewCarousel } from "@/components/blocks/client_review_carousel
 
         <ServiceCard image={services3}>
           <div slot="heading">Floor Finishing & Carpet Cleaning</div>
-          <div slot="content">
+          <P slot="content">
             In addition to full carpet cleaning, we offer complete floor
             cleaning, stripping, refinishing, and waxing services
-          </div>
+          </P>
         </ServiceCard>
       </div>
     </Container>
@@ -182,16 +181,16 @@ import { ClientReviewCarousel } from "@/components/blocks/client_review_carousel
   <section id="calling card"></section>
 
   <Container slot="footer">
-    <div class="flex flex-col md:grid grid-cols-5 gap-20 pb-32">
+    <div class="flex flex-col md:grid grid-cols-5 gap-20 pb-8">
       <div class="col-span-3">
         <Heading level="h2">Guaranteed Satisfaction</Heading>
-        <p class="text-gray-600">
+        <P>
           At Saniclean, your satisfaction is guaranteed. If, for any reason, you
           need to contact us, we are never more than just a telephone call away.
           24 hours a day. It is our attention to detail as well as our unmatched
           customer service that provides us with our ever increasing list of
           satisfied clients.
-        </p>
+        </P>
       </div>
 
       <div class="col-span-2">

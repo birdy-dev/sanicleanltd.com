@@ -37,8 +37,8 @@ import FloatingPanel from "@/components/floating_panel.astro";
           Contact us for a free estimate
         </h2>
         <p class="text-lg/8 text-gray-600">
-          Most services are available on a two-hour notice. We also provide a 24
-          hour emergency calling service.
+          We'll contact you to better understand your business cleaning needs.
+          We also provide a 24 hour emergency calling service.
         </p>
 
         <div>
@@ -65,7 +65,7 @@ import FloatingPanel from "@/components/floating_panel.astro";
               <dd>
                 <a
                   class="hover:text-gray-900 hover:underline"
-                  href="mailto:hello@example.com">{SITE_CONTACT.email}</a
+                  href={`mailto:${SITE_CONTACT.email}`}>{SITE_CONTACT.email}</a
                 >
               </dd>
             </div>

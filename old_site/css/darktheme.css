@@ -1,0 +1,123 @@
+/*
+* Author: Wisely Themes
+* Author URI: http://creativemarket.com/wiselythemes
+* Theme Name: Arctic
+* Theme URI: http://www.wiselythemes.com/arctic
+* Version: 1.0.0
+*/
+
+
+body { background-color:#222222; color:#7b7b7b; }
+input[type="text"], textarea{ border:1px solid #111111; background: #1E1E1E; color:#bfbfbf; }
+input[type="text"]:focus, textarea:focus{ border-color: #646464; -moz-box-shadow: 0 0 10px #646464; -webkit-box-shadow: 0 0 10px #646464; box-shadow: 0 0 10px #646464;}
+#action-box{ background-color:#181818; }
+.featured-item{ border-color: #181818; }
+.featured-item:hover { background-color:#181818; }
+.featured-item-img .item-info{ background-color:rgba(0,0,0,0.8); }
+.featured-item .title{ color:#e7e7e7; }
+.featured-item span a{ color:#e7e7e7; }
+.featured1-home2 .title { background-color:rgba(0,0,0,0.8); }
+.featured1-home2 .desc{ background-color:rgba(0,0,0,0.8); }
+.featured2-home2:hover, .featured3-home2:hover{ background:none; }
+.quote-large{ border-top:1px solid #313131; border-bottom:1px solid #181818; color:#e7e7e7; background: #222222; background: -moz-linear-gradient(left,  #2b2b2b 0%, #2b2b2b 50%, #222222 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,#222222), color-stop(50%,#2b2b2b), color-stop(100%,#222222)); background: -webkit-linear-gradient(left,  #222222 0%,#2b2b2b 50%,#222222 100%); background: -o-linear-gradient(left,  #222222 0%,#2b2b2b 50%,#222222 100%); background: -ms-linear-gradient(left,  #222222 0%,#2b2b2b 50%,#222222 100%); background: linear-gradient(to right,  #222222 0%,#2b2b2b 50%,#222222 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#222222',GradientType=1 ); }		
+.quote-large:before { box-shadow: 0 -3px 14px rgba(17, 17, 17, 0.75); }
+.quote-large:after { box-shadow: 0 4px 14px rgba(17, 17, 17, 0.75); }
+.section-title{ border-bottom-color:#131313; }
+.flex-direction-nav a { background-color:#515151; }
+#projects-slider .slides > li .item-info, 
+#projects-slider-home2 .slides > li .item-info{ background-color:rgba(0,0,0,0.8); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#b3000000', endColorstr='#b3000000'); }
+#projects-slider .slides > li .item-title, 
+#projects-slider-home2 .slides > li .item-title{ border-bottom:1px solid #343839; }
+#featured-slider .slides li .item-info { background-color:rgba(0,0,0,0.8); }
+#services .service-item .item-info{ border:1px solid #181818; }
+#services .service-item .item-info .triangle-up{ border-color:transparent transparent #181818 transparent; }
+#services .service-item .item-info .triangle-up:before{ border-color:transparent transparent #222222 transparent; }
+#services .service-item .item-info a { background-color:#181818; color:#bfbfbf; }
+.testemonial{ background-color:#1E1E1E; }
+.testemonial:before, .testemonial:after{ color:#343434; }
+.testemonial-triangle{ border-color: transparent transparent #1e1e1e #1e1e1e; _border-color: #000000 #000000 #1e1e1e #000000; _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000'); -webkit-transform: rotate(15deg); -moz-transform: rotate(15deg); -ms-transform: rotate(15deg); -o-transform: rotate(15deg); transform: rotate(15deg); }
+.testemonial-author{ background-color:#2E2E2E; }
+.recruit-bg{ background-color:#2E2E2E; }
+#footer{ border-top:1px solid #2d2d2d; background-color:#181818; }
+#footer:before { box-shadow:0 -15px 15px rgba(17, 17, 17, 0.90); }
+.footer-section-title{ border-bottom:1px solid #131313; }
+.last-post-item{ border-bottom:1px solid #131313; }
+.last-post-item span.comments{ color:#2c2c2c; }
+.footer-divider{ border-top:1px solid #131313; }
+.footer-divider .triangle-up{ border-color:transparent transparent #131313 transparent; }
+.footer-divider .triangle-up:before{ border-color:transparent transparent #181818 transparent; }
+#twitter-box li{ border-bottom:1px solid #131313; }
+#sn-icons a img{ margin-top: -25px; }
+#sn-icons a img:hover{ margin-top: 0px; }
+#page-title{ background-color:#181818; }
+.accordion > div, .faq > div{ border-top:1px solid #181818; }
+.accordion > div:last-child, .faq  > div:last-child{ border-bottom:1px solid #181818; }
+.vertical-tabs{ background-color: #181818; border:1px solid #181818; }
+.vertical-tabs > ul{ background-color: #222222; }
+.vertical-tabs > ul > li{ border-bottom:5px solid #222222; border-top:1px solid #181818 !important; }
+.vertical-tabs > ul > li.selected{ background-color: #181818; }
+.vertical-tabs > div { background-color: #181818; }
+.horizontal-tabs{ background-color: #181818; border:1px solid #181818; }
+.horizontal-tabs > ul{ background-color: #222222; }
+.horizontal-tabs > ul > li{ border-left:1px solid #181818; }
+.horizontal-tabs > ul > li.selected{ background-color: #181818; }
+.horizontal-tabs > div .title{ border-bottom:1px solid #646464; }
+.vertical-pricing-item{ border:1px solid #181818; }
+.vertical-pricing-item  li.title{ background-color:#1c1c1c; }
+.vertical-pricing-item  li.price{ background-color:#181818; }
+.vertical-pricing-item  li.price .triangle-down{ border-top-color:#181818; }
+.vertical-pricing-item  li.enable{ background-color:#1e1e1e; }
+.vertical-pricing-item  li.disable{ color:#303030; }
+.vertical-pricing-item:hover{ background-color:#181818; -moz-box-shadow: 0 0 10px #000000; -webkit-box-shadow: 0 0 10px #000000; box-shadow: 0 0 10px #000000; }
+.vertical-pricing-item:hover li.enable{ background-color:#1e1e1e; }
+.horizontal-pricing{ border:1px solid #181818; }
+.horizontal-pricing:hover{ background-color:#181818; }
+#packages-slider .slides > li .item-info{ background-color:rgba(0,0,0,0.8); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#b3000000', endColorstr='#b3000000'); }
+#packages-slider .slides > li .pack-bottom-info{ background-color: #181818; }
+.sitemap > li > ul{ background-color:#1D1D1D; }
+.sitemap > li ul a{ color:#BFBFBF; }
+.searchResultsNum{ border-bottom:1px solid #181818; }
+.searchResult{ border-bottom:1px solid #181818; }
+.pages a{ color:#444444; }
+.page-next, .page-prev { background-color:#515151; }
+.form-controls{ color:#444444; }
+.contact-info-txt{ background-color:#1E1E1E; }
+.contact-info-txt:before{ border-color: transparent #1E1E1E transparent transparent; }
+.contact-info-txt a{ color:#bfbfbf; }
+.post .info{ color:#444; border-top:1px solid #181818; border-bottom:1px solid #181818; }
+.post .info a{ color:#444; }
+.tags a{ background-color:#181818; color:#bfbfbf; }
+#blog-content .pages{ border-top:1px solid #181818; }
+.post-quote:before, .post-quote:after{ color:#343434; }
+.highlight{ background-color:#181818; }
+.sn-share{ border:1px solid #181818; background-color:#1E1E1E; }
+.comments-wrap ul img{ border:2px solid #464646; }
+.comment{ background-color:#1E1E1E; }
+.comment:before{ border-color: transparent #1E1E1E transparent transparent; }
+.comment-info{ border-bottom:1px solid #181818; }
+.portfolio-header{ border-bottom:1px solid #181818; }
+.portfolio-menu a:not(.txt-highlight-color){ color:#bfbfbf; }
+.portf-pages{ border-top:1px solid #181818; }
+.portfolio-item .item-info{ background-color:rgba(0,0,0,0.7); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#b3000000', endColorstr='#b3000000'); }
+.portfolio-item .item-title{ border-bottom:1px solid #727071; }
+.portfolio4-item{ border:1px solid #181818 !important; }
+.portfolio4-item .item-info{ background:none; }
+.portfolio4-item-bg{ background-color: #181818; }
+.backtogal{ color:#bfbfbf; }
+.project-category{ color:#444444; }
+.proj-data a{ color:#bfbfbf; }
+#tiles li { background-color: #181818; }
+#tiles h4{ border-bottom:1px solid #343839; }
+#pagenotfound{ background-color: #181818; }
+#pagenotfound .triangle-left{ border-color: transparent #181818 transparent transparent; }
+
+
+@media only screen and (max-width: 767px) {
+	#projects-slider .slides > li .item-info, 
+	#projects-slider-home2 .slides > li .item-info{ background-color:#181818; }
+}
+
+@media only screen and (max-width: 479px) {
+	.featured1-home2 .title, .featured1-home2 .desc{ background:none; }
+	.featured1-home2 .title{ color:#e6e6e6; }
+}

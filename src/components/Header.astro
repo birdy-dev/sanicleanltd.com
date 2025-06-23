@@ -12,9 +12,12 @@ import Container from "./container.astro";
     <div class="flex flex-wrap justify-between items-center pt-4 pb-2">
       <div class="flex items-center gap-2 lg:gap-8">
         <div>
-          <a href="/">
+          <a
+            class="flex items-center justify-center h-24 overflow-clip"
+            href="/"
+          >
             <Image
-              class={"h-18 md:h-24 w-fit object-contain object-center"}
+              class={"h-30 w-fit object-contain object-center"}
               src={Logo}
               alt={SITE_TITLE}
               width="300"

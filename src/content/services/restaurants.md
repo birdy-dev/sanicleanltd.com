@@ -1,6 +1,6 @@
 ---
-slug: restaurants
-title: Restaurants
+slug: restaurants-cafes
+title: Restaurants & Cafes
 description: ""
 image: "./restaurants.jpg"
 ---

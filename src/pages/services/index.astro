@@ -4,6 +4,8 @@ import Layout from "../_layout.astro";
 import { Image } from "astro:assets";
 
 import servicesBanner from "../../images/services/services_banner.png";
+import commercialCleaning from "../../images/services/commercial_cleaning.jpg";
+import janitorialServices from "../../images/services/janitorial_services.png";
 
 import { getStaticPaths } from "./[...slug].astro";
 import { Icon } from "astro-icon/components";
@@ -31,9 +33,6 @@ const services = [
   "Sweeping and Polishing",
   "Washing Windows & Walls",
   "After Construction Cleaning",
-];
-
-const extraServices = [
   "Floor Stripping and Waxing",
   "Carpet Cleaning",
   "Window Cleaning",
@@ -43,18 +42,18 @@ const extraServices = [
 <Layout title="Services" description="">
   <FloatingPanel shadow="y">
     <Container>
-      <Heading>Commercial Cleaning Services</Heading>
+      <Heading>Our Services</Heading>
     </Container>
   </FloatingPanel>
 
   <Container class="bg-gray-100">
-    <div class="space-y-20">
-      <section class="flex flex-col sm:grid grid-cols-2 gap-y-8 gap-x-16 py-16">
+    <div class="space-y-38 pt-16 pb-24">
+      <section class="flex flex-col sm:grid grid-cols-2 gap-y-8 gap-x-16">
         <Image
           class="border-b-8 border-background w-full"
           src={servicesBanner}
           height="341"
-          width={1280}
+          width={338}
           alt="Elevators and cleaning cart"
         />
         <div class="text-lg">
@@ -69,8 +68,77 @@ const extraServices = [
         </div>
       </section>
 
-      <section class="space-y-8 py-8">
-        <h2 class="inline-block text-brand-700 text-2xl font-light"></h2>
+      <section class="grid lg:grid-cols-2 gap-16">
+        <div>
+          <h2 class="inline-block text-brand-700 text-2xl font-light">
+            Commercial Cleaning
+          </h2>
+          <hr class="border-brand-600 my-4" />
+          <div class="flex flex-col md:flex-row gap-8">
+            <Image
+              class="aspect-square object-cover w-full max-h-60 md:size-60 overflow-clip rounded-lg"
+              src={commercialCleaning}
+              height="600"
+              width="600"
+              alt="Commercial Cleaning"
+            />
+            <P>
+              Saniclean delivers reliable commercial cleaning tailored to your
+              business needs. With a focus on cleanliness, disinfecting, and
+              presentation, we keep your workspace looking professional and
+              running smoothly. Our recurring service ensures consistent
+              sanitation, helping create a healthier, more productive
+              environment for staff and visitors alike.
+            </P>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="inline-block text-brand-700 text-2xl font-light">
+            Janitorial Services
+          </h2>
+          <hr class="border-brand-600 my-4" />
+          <div class="flex flex-col md:flex-row gap-8">
+            <Image
+              class="aspect-square object-cover w-full max-h-60 md:size-60 overflow-clip rounded-lg"
+              src={janitorialServices}
+              height="600"
+              width="600"
+              alt="Janitorial Services"
+            />
+            <P>
+              Our janitorial services are designed for businesses that need
+              dependable, ongoing cleaning support. From restrooms to lobbies,
+              Saniclean maintains every corner with precision and care. We help
+              you uphold a clean, welcoming image while promoting hygiene and
+              safety throughout your facility.
+            </P>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="rounded-lg bg-white p-8 mt-4 space-y-4">
+          <p class="text-gray-500 text-center">
+            Offering services within Western Canada
+          </p>
+          <div class="flex items-center justify-center gap-4">
+            <span
+              class="px-4 py-2 bg-brand-100 text-brand-800 rounded-full text-lg font-medium"
+              >Alberta</span
+            >
+            <span
+              class="px-4 py-2 bg-brand-100 text-brand-800 rounded-full text-lg font-medium"
+              >British Columbia</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="text-center py-4">
+          <Heading level="h2">Serving a variety of businesses</Heading>
+        </div>
 
         <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8">
           {
@@ -99,52 +167,52 @@ const extraServices = [
         </div>
       </section>
 
-      <section class="grid md:grid-cols-2 gap-16 py-16">
-        <div class="space-y-8">
-          <div>
-            <h2 class="inline-block text-brand-700 text-2xl font-light">
-              Services That We Provide
-            </h2>
-            <hr class="border-brand-600 my-4" />
-          </div>
-
-          <ul>
-            {
-              services.map((service) => {
-                return (
-                  <li class="text-lg text-gray-600 py-1 flex items-center gap-2">
-                    <Icon class="size-6 text-brand-600" name="circle-check" />
-                    <span>{service}</span>
-                  </li>
-                );
-              })
-            }
-          </ul>
+      <section>
+        <div>
+          <h2 class="inline-block text-brand-700 text-2xl font-light">
+            Services
+          </h2>
+          <hr class="border-brand-600 my-4" />
         </div>
+        <ul class="grid md:grid-cols-3">
+          {
+            services.map((service) => {
+              return (
+                <li class="text-lg text-gray-600 py-1 flex items-center gap-2">
+                  <Icon class="size-6 text-brand-600" name="circle-check" />
+                  <span>{service}</span>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </section>
 
-        <div class="space-y-8">
-          <div>
-            <h2 class="inline-block text-brand-700 text-2xl font-light">
-              Extra Services
-            </h2>
-            <hr class="border-brand-600 my-4" />
-          </div>
+      <section class="mx-auto max-w-screen-md" id="Why Saniclean">
+        <div class="text-center py-4">
+          <Heading level="h2">Why Saniclean?</Heading>
+        </div>
+        <div class="space-y-4">
+          <P>
+            We will set up a time to have a walk-through and design a service
+            that suits your commercial cleaning and sanitizing needs.
+          </P>
 
-          <ul>
-            {
-              extraServices.map((service) => {
-                return (
-                  <li class="text-lg text-gray-600 py-1 flex items-center gap-2">
-                    <Icon
-                      class="size-6 text-brand-600 fill-white stroke-white"
-                      name="circle-check"
-                    />
-                    <span>{service}</span>
-                  </li>
-                );
-              })
-            }
-          </ul>
+          <P>
+            We will ask you to provide us with a detail floor plan (if
+            available) of your facility and your hours of operation so that we
+            can present you with a customize cleaning initial draft where we
+            will address any concerns that you have and provide you with
+            suggestions that have been proven successful in facilities like
+            yours. Also, we will clear out anything that could of hazard toward
+            your staff and ours.
+          </P>
+
+          <P>
+            We provide consumable products and keep inventory for our customers.
+            You will never run low in hand soap, paper towel, toilet paper,
+            garbage bags, recycling bags again.
+          </P>
         </div>
       </section>
     </div>

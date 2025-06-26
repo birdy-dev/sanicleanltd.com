@@ -48,23 +48,40 @@ const services = [
 
   <Container class="bg-gray-100">
     <div class="space-y-38 pt-16 pb-24">
-      <section class="flex flex-col sm:grid grid-cols-2 gap-y-8 gap-x-16">
-        <Image
-          class="border-b-8 border-background w-full"
-          src={servicesBanner}
-          height="341"
-          width={338}
-          alt="Elevators and cleaning cart"
-        />
-        <div class="text-lg">
-          <P>
-            We have ongoing training for our staff and supervise constantly. We
-            love hearing from our customers. We have 24 hour call service and we
-            provide you with a communication calendar for you to keep in contact
-            with the cleaners as well.
-          </P>
-          <br />
-          <P>Our staff wear tops to identify them as part of our team.</P>
+      <section class="space-y-8">
+        <div class="flex flex-col sm:grid grid-cols-2 gap-y-8 gap-x-16">
+          <Image
+            class="border-b-8 border-background w-full"
+            src={servicesBanner}
+            height="341"
+            width={338}
+            alt="Elevators and cleaning cart"
+          />
+          <div class="text-lg">
+            <P>
+              We have ongoing training for our staff and supervise constantly.
+              We love hearing from our customers. We have 24 hour call service
+              and we provide you with a communication calendar for you to keep
+              in contact with the cleaners as well.
+            </P>
+            <br />
+            <P>Our staff wear tops to identify them as part of our team.</P>
+          </div>
+        </div>
+        <div class="rounded-lg bg-white py-4 space-y-2">
+          <p class="text-gray-500 text-center">
+            Offering services within Western Canada
+          </p>
+          <div class="flex items-center justify-center gap-4">
+            <span
+              class="px-4 py-2 bg-brand-100 text-brand-800 rounded-full text-lg font-medium"
+              >Alberta</span
+            >
+            <span
+              class="px-4 py-2 bg-brand-100 text-brand-800 rounded-full text-lg font-medium"
+              >British Columbia</span
+            >
+          </div>
         </div>
       </section>
 
@@ -113,24 +130,6 @@ const services = [
               you uphold a clean, welcoming image while promoting hygiene and
               safety throughout your facility.
             </P>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="rounded-lg bg-white p-8 mt-4 space-y-4">
-          <p class="text-gray-500 text-center">
-            Offering services within Western Canada
-          </p>
-          <div class="flex items-center justify-center gap-4">
-            <span
-              class="px-4 py-2 bg-brand-100 text-brand-800 rounded-full text-lg font-medium"
-              >Alberta</span
-            >
-            <span
-              class="px-4 py-2 bg-brand-100 text-brand-800 rounded-full text-lg font-medium"
-              >British Columbia</span
-            >
           </div>
         </div>
       </section>

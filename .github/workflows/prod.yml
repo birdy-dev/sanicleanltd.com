@@ -23,10 +23,10 @@ jobs:
           pnpm build
 
       - name: ftp
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: sebastianpopp/ftp-action@v2.0.0
         with:
-          server: ${{ secrets.FTP_SERVER}}
-          username: ${{ secrets.FTP_USERNAME}}
+          host: ${{ secrets.FTP_SERVER}}
+          user: ${{ secrets.FTP_USERNAME}}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/
-          server-dir: temp/
+          localDir: ./dist/
+          remoteDir: ./temp/

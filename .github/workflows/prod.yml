@@ -22,6 +22,7 @@ jobs:
           pnpm install
           pnpm build
 
+      # Docker wrapper for `lftp` https://lftp.yar.ru/lftp-man.html
       - name: ftp
         uses: sebastianpopp/ftp-action@v2.0.0
         with:

@@ -5,14 +5,14 @@ import {
   PopoverPanel,
 } from "@headlessui/react";
 import menuIcon from "../../icons/menu.svg";
-import { type PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 
 export function MobileNav(props: PropsWithChildren) {
   return (
     <div>
       <Popover className="relative">
         <PopoverButton className="flex items-center gap-1.5 bg-white text-foreground/80 px-4 py-2">
-          <img className="size-5" src={menuIcon.src} /> Menu
+          <img className="size-5" src={menuIcon.src} alt="menu" /> Menu
         </PopoverButton>
 
         <PopoverBackdrop className="fixed inset-0 z-50" />

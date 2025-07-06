@@ -3,5 +3,12 @@
     "[astro]": {
         "editor.tabSize": 2,
         "editor.defaultFormatter": "astro-build.astro-vscode"
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "pnpm-lock.yaml": true,
+        "**/old_site": true,
     }
 }

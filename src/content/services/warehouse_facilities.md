@@ -5,4 +5,6 @@ description: ""
 image: "./warehouse_facilities.jpg"
 ---
 
-Even high-traffic, high-dust environments like warehouses benefit from Saniclean’s structured cleaning services. Our recurring plans reduce buildup, improve safety, and support operational efficiency. We help you meet cleanliness standards without slowing down your workflow.
+Saniclean delivers reliable cleaning services for warehouses and distribution centres, supporting both operational efficiency and employee well-being. We service the entire facility, including shipping areas, storage zones, staff offices, lunchrooms, and washrooms.
+
+Our team removes dust, debris, and contaminants that affect safety and productivity, with added services like floor scrubbing and seasonal deep cleaning for high use areas. We help keep your facility clean, organized, and ready for daily operations.

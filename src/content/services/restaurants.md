@@ -5,4 +5,6 @@ description: ""
 image: "./restaurants.jpg"
 ---
 
-Cleanliness is critical in food service, and Saniclean delivers top-tier restaurant cleaning on a regular schedule. We sanitize kitchens, dining areas, and restrooms to support safety and enhance customer experience. Let us handle the cleaning, so you can focus on great food and service.
+Cleanliness is essential in food service, and Saniclean provides reliable, scheduled cleaning for restaurants and cafes. We sanitize kitchens, dining areas, and restrooms to maintain safety, meet health standards, and enhance the guest experience.
+
+Let us take care of the cleaning, so you can focus on great food and outstanding service.

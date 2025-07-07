@@ -1,8 +1,11 @@
 ---
 slug: vehicle-dealerships
-title: Vehicle Dealerships
+title: Vehicle & RV Dealerships
 description: ""
 image: "./vehicle_dealerships.jpg"
 ---
 
-First impressions matter—especially in showrooms. Saniclean provides recurring cleaning for dealerships, keeping floors, display areas, offices, and customer lounges spotless. We help maintain a sleek, professional environment that complements your brand and inventory.
+<!-- todo change the image to chevrolet -->
+First impressions matter, whether in vehicle showrooms or RV dealerships. Saniclean provides recurring cleaning services that keep floors, display areas, offices, service waiting areas, and customer lounges spotless.
+
+We focus on high visibility spaces, ensuring floors are clean and polished, glass and surfaces are smudge free, and restrooms are hygienic and fully stocked. Our services help maintain a sleek, professional environment that highlights your inventory and reflects your brand’s quality.

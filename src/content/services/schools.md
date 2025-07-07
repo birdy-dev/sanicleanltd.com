@@ -5,6 +5,4 @@ description: ""
 image: "./schools.jpg"
 ---
 
-Saniclean supports a healthy learning environment with routine, reliable school cleaning services. We disinfect classrooms, hallways, restrooms, and shared spaces to reduce the spread of germs. Our recurring cleaning helps students and staff stay safe and focused throughout the school year.
-
-Saniclean supports a clean and healthy school environment with regular disinfecting of classrooms, hallways, and common areas. Our recurring services reduce the spread of germs and help protect students, teachers, and staff. We focus on high-traffic zones to promote safety and learning all year round.
+Saniclean provides reliable cleaning services for schools and theatres, creating safe and welcoming spaces for students, staff, and guests. We focus on disinfecting classrooms, hallways, restrooms, theatres, and shared spaces to reduce germs and maintain healthy environments. Our recurring services target high-traffic areas to help prevent the spread of illness, supporting safety, focus, and comfort throughout the year.

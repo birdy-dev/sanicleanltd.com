@@ -5,6 +5,6 @@ description: ""
 image: "./senior_centres.jpg"
 ---
 
-Cleanliness and comfort are essential in senior living environments, and Saniclean takes that responsibility seriously. Our recurring services prioritize hygiene while respecting the dignity and routines of residents. We create safe, welcoming spaces where seniors can feel at ease.
+Cleanliness and comfort are essential in senior living environments, and Saniclean takes that responsibility seriously. Our recurring cleaning services prioritize hygiene while respecting the dignity, routines, and comfort of residents. We create safe, welcoming spaces where seniors can feel at ease.
 
-Cleanliness is critical in senior centres, where vulnerable residents rely on a safe and comfortable environment. Saniclean’s recurring cleaning services include thorough disinfection of shared spaces, restrooms, and high-touch surfaces. We help maintain health and dignity through consistent, compassionate service.
+We provide thorough disinfection of shared spaces, restrooms, and high touch surfaces, along with specialized day porter services for on-site support throughout the day. Our team helps maintain health, dignity, and peace of mind through consistent, compassionate care.

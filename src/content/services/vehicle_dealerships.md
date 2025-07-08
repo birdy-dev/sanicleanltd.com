@@ -3,6 +3,7 @@ slug: vehicle-dealerships
 title: Vehicle & RV Dealerships
 description: ""
 image: "./vehicle_dealerships.png"
+sortOrder: 5
 ---
 
 First impressions matter, whether in vehicle showrooms or RV dealerships. Saniclean provides recurring cleaning services that keep floors, display areas, offices, service waiting areas, and customer lounges spotless.

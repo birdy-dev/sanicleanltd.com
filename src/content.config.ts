@@ -9,6 +9,7 @@ const service = defineCollection({
 			title: z.string(),
 			description: z.string().optional(),
 			image: image(),
+			sortOrder: z.number().optional(),
 		}),
 });
 

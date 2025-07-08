@@ -3,6 +3,7 @@ slug: warehouse-facilities
 title: Warehouse Facilities
 description: ""
 image: "./warehouse_facilities.jpg"
+sortOrder: 3
 ---
 
 Saniclean delivers reliable cleaning services for warehouses and distribution centres, supporting both operational efficiency and employee well-being. We service the entire facility, including shipping areas, storage zones, staff offices, lunchrooms, and washrooms.

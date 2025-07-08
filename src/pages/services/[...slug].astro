@@ -5,10 +5,19 @@ import Layout from "../_layout.astro";
 import Container from "@/components/container.astro";
 import Heading from "@/components/ui/heading.astro";
 import { Image } from "astro:assets";
-import { P } from "@/components/ui/text";
 
 export async function getStaticPaths() {
-  const services = await getCollection("service");
+  const services = (await getCollection("service")).sort((a, b) => {
+    if (a.data.sortOrder && b.data.sortOrder) {
+      return a.data.sortOrder - b.data.sortOrder;
+    }
+
+    if (!a.data.sortOrder && !b.data.sortOrder) {
+      return a.data.title.localeCompare(b.data.title);
+    }
+
+    return !a.data.sortOrder ? 1 : -1;
+  });
 
   const cities = ["edmonton", "calgary", "vancouver"];
 

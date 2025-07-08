@@ -3,7 +3,7 @@ import Container from "@/components/container.astro";
 import Layout from "../_layout.astro";
 import { Image } from "astro:assets";
 
-import servicesBanner from "../../images/services/services_banner.png";
+import servicesBanner from "../../images/services/services_banner.jpg";
 import commercialCleaning from "../../images/services/commercial_cleaning.jpg";
 import janitorialServices from "../../images/services/janitorial_services.png";
 
@@ -53,6 +53,7 @@ const servicesByCategory = {
     "Elevator and stairwell cleaning",
     "After construction cleaning",
     "Restocking kitchen supplies",
+    "Cleaning of light fixtures",
   ],
 };
 ---
@@ -96,13 +97,13 @@ const servicesByCategory = {
       </section>
 
       <section class="space-y-8">
-        <div class="flex flex-col sm:grid grid-cols-2 gap-y-8 gap-x-16">
+        <div class="flex flex-col md:grid grid-cols-2 gap-y-8 gap-x-16">
           <Image
-            class="border-b-8 border-background w-full"
+            class="border-b-8 border-background w-full object-cover object-center max-h-70 md:max-h-none aspect-[2/3] lg:aspect-[3/2] rounded-lg"
             src={servicesBanner}
-            height="341"
-            width={338}
-            alt="Elevators and cleaning cart"
+            height="500"
+            width="338"
+            alt="Saniclean employee cleaning a mirror"
           />
           <div class="text-lg space-y-4">
             <P>
@@ -155,7 +156,7 @@ const servicesByCategory = {
           <hr class="border-brand-600 my-4" />
           <div class="flex flex-col md:flex-row gap-8">
             <Image
-              class="aspect-square object-cover w-full max-h-60 md:size-60 overflow-clip rounded-lg"
+              class="aspect-square object-cover w-full max-h-60 min-w-60 md:size-60 overflow-clip rounded-lg"
               src={commercialCleaning}
               height="600"
               width="600"
@@ -179,13 +180,13 @@ const servicesByCategory = {
           <hr class="border-brand-600 my-4" />
           <div class="flex flex-col md:flex-row gap-8">
             <Image
-              class="aspect-square object-cover w-full max-h-60 md:size-60 overflow-clip rounded-lg"
+              class="aspect-square object-cover w-full max-h-60 min-w-60 md:size-60 overflow-clip rounded-lg"
               src={janitorialServices}
               height="600"
               width="600"
               alt="Janitorial Services"
             />
-            <P>
+            <P className="">
               Our services include detailed janitorial care, sanitation, and
               disinfecting of high touch areas throughout offices, lobbies,
               restrooms, and shared spaces. We proudly offer eco friendly
@@ -215,7 +216,7 @@ const servicesByCategory = {
                     src={path.image}
                     width={450}
                     height={300}
-                    alt="hi"
+                    alt={path.label}
                   />
                   <div class="absolute flex items-center justify-center inset-0 backdrop-contrast-70 group-hover:backdrop-contrast-90 transition-all bg-gray-900/40">
                     <span class="text-center text-white text-2xl sm:text-3xl font-medium px-4">

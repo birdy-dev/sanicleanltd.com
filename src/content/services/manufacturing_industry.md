@@ -3,6 +3,7 @@ slug: manufacturing-industry
 title: Manufacturing & Scientific Industry
 description: ""
 image: "./manufacturing_industry.jpg"
+sortOrder: 4
 ---
 
 Saniclean provides specialized cleaning services for manufacturing facilities, scientific spaces, and high precision environments. Our recurring services reduce dust, debris, and contaminants that affect safety, efficiency, and compliance.

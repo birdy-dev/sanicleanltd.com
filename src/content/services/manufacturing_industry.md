@@ -1,6 +1,6 @@
 ---
 slug: manufacturing-industry
-title: Manufacturing & Scientific Industry
+title: Manufacturing & Scientific Industries
 description: ""
 image: "./manufacturing_industry.jpg"
 sortOrder: 4
